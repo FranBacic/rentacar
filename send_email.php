@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true;
     $mail->Username = 'ivicivan192@gmail.com'; 
-    $mail->Password = 'pittarello55'; 
+    $mail->Password = 'xxxxxxxxxx'; 
 
     // Postavi primatelja emaila
     $mail->setFrom('ivicivan192@gmail.com', 'Ivan'); 

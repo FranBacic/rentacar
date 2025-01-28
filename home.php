@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -24,68 +22,79 @@ session_start();
             margin-bottom: 0;
         }
 
-          html,
-    body {
-        height: 100%;
-    }
+        html,
+        body {
+            height: 100%;
+        }
 
-    .wrapper {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .content {
-        flex: 1;
-    }
+        .content {
+            flex: 1;
+        }
 
-    footer {
-        flex-shrink: 0;
-        /* background-color: #f2f2f2; */
-        padding: 25px;
-    }
+        footer {
+            flex-shrink: 0;
+            padding: 25px;
+        }
+
+        /* Reduced size for the carousel */
+        #myCarousel .carousel-inner .item img {
+            width: 80%; /* Adjust width percentage to make it smaller */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Optionally, you can control carousel height */
+        #myCarousel {
+            max-width: 800px; /* Limit the maximum width */
+            margin: 0 auto; /* Center carousel horizontally */
+        }
     </style>
 </head>
 
 <body>
-        <?php include 'nav.php'?>
+    <?php include 'nav.php' ?>
 
-<div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="https://www.autozubak.hr/wp-content/uploads/2022/07/audi-a4.jpg" alt="Audi A4" style="width:100%;">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="https://www.autozubak.hr/wp-content/uploads/2022/07/audi-a4.jpg" alt="Audi A4">
+                </div>
+
+                <div class="item">
+                    <img src="https://media.peugeot.hr/image/82/7/all-new-208-gt-line-front.561827.17.jpg" alt="Peugeot 208">
+                </div>
+
+                <div class="item">
+                    <img src="https://hyundai.hr/wp-content/uploads/2020/09/PDPE_HB_TopTrim_DG03-01_EXT_3-4-front_rgb_v01_w4b-CL_16x9-1255x705.jpg" alt="Hyundai i30">
+                </div>
             </div>
 
-            <div class="item">
-                <img src="https://media.peugeot.hr/image/82/7/all-new-208-gt-line-front.561827.17.jpg" alt="Peugeot 208" style="width:100%;">
-            </div>
-
-            <div class="item">
-                <img src="https://hyundai.hr/wp-content/uploads/2020/09/PDPE_HB_TopTrim_DG03-01_EXT_3-4-front_rgb_v01_w4b-CL_16x9-1255x705.jpg" alt="Hyundai i30" style="width:100%;">
-            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-</div>
-
 
 <div class="container-fluid text-center">
 
@@ -108,7 +117,7 @@ session_start();
             <p>Obratite nam se danas i rezervirajte vozilo koje će vam omogućiti da započnete svoje putovanje s povjerenjem i udobnošću. Uživajte u glatkom i bezbrižnom najmu automobila s našom rent-a-car firmom.</p>
         </div>
     </div>
-</div>
+
     <footer class="fixed-bottom">
         <div class="container-fluid text-center">
             <a href="https://www.instagram.com/europcar/" target="_blank" class="btn btn-primary">Instagram</a>
@@ -117,3 +126,5 @@ session_start();
         </div>
     </footer>
 </body>
+
+</html>
